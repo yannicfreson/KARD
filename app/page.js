@@ -42,7 +42,7 @@ export default function Home() {
                     <p className="">{decode(userInfo.website)}</p>
                 </div>
 
-                <img src={qrCodeUrl ? `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${decode(userInfo.qrCodeUrl)}` : "https://via.placeholder.com/150"} alt="QR code" className="w-1/2" />
+                <img src={userInfo.qrCodeUrl ? `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${decode(userInfo.qrCodeUrl)}` : "https://via.placeholder.com/150"} alt="QR code" className="w-1/2" />
 
                 <p className="font-bold">{decode(userInfo.tax)}</p>
             </div>
