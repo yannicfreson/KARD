@@ -2,13 +2,16 @@ export default function Home() {
     let name = "Fréson"
     let email = "contact@yannicfreson.be"
     let website = "www.yannicfreson.be"
-    let phone = "+32 470 66 32 65"
+    let phone = "+32 123 45 67 89"
     let tax = "BE 0804 626 876"
     let services = ["Nightlife", "Events", "Potraits"]
 
     return (
         <div className="flex flex-col items-center justify-center bg-black h-svh w-svw text-black p-8">
-            <div className="bg-neutral-100 w-full aspect-[1/1.75] rounded-3xl flex flex-col justify-center items-center gap-8">
+            <div
+                className="bg-neutral-100 w-full aspect-[1/1.75] rounded-3xl flex flex-col justify-center items-center gap-8
+            "
+            >
                 <img src="/profile_picture.jpg" alt="Yannic Fréson" className="rounded-full aspect-square object-cover object-top w-1/2" />
                 <div className="flex flex-col items-center">
                     <p className="">{email}</p>
