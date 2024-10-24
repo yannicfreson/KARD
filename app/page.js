@@ -18,33 +18,27 @@ export default function Home() {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center bg-black h-svh w-svw text-black p-8">
+        <div className="flex flex-col items-center justify-center bg-black h-svh w-svw text-[#fff] p-8">
             <div
-                className="bg-neutral-100 w-full aspect-[1/1.75] rounded-3xl flex flex-col justify-center items-center gap-6 p-8 border-accent-light border-2
+                className="bg-black w-full aspect-[1/1.75] rounded-[2em] flex flex-col justify-center items-center gap-6 p-8 border-accent-light border-2 shadow-lg shadow-[#eea30c88]
             "
             >
                 <div className="font-asteroid -ml-10 flex text-6xl text-accent-light -mb-2">
-                    {
-                        // first letter of the name
-                        <p className="scale-y-50">{decode(userInfo.name).charAt(0)}</p>
-                    }
-                    {
-                        // the rest of the name
-                        <p className="scale-y-75 mt-3 -ml-3">{decode(userInfo.name).slice(1)}</p>
-                    }
+                    <p className="scale-y-50">{decode(userInfo.name).charAt(0)}</p>
+                    <p className="scale-y-75 mt-3 -ml-3">{decode(userInfo.name).slice(1)}</p>
                 </div>
 
-                <img src="/profile_picture.jpg" alt="Yannic Fréson" className="rounded-full aspect-square object-cover object-top w-1/2 border-2 border-accent-light" />
+                <img src="/profile_picture.jpg" alt="Yannic Fréson" className="rounded-full aspect-square object-cover object-top w-1/2 border-[2px] border-accent-light" />
 
-                <div className="flex flex-col font-bold items-center">
+                <div className="flex flex-col font-bold items-center text-lg">
                     <p className="">{decode(userInfo.phone)}</p>
                     <p className="">{decode(userInfo.email)}</p>
                     <p className="">{decode(userInfo.website)}</p>
                 </div>
 
-                <img src={userInfo.qrCodeUrl ? `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${decode(userInfo.qrCodeUrl)}` : "https://via.placeholder.com/150"} alt="QR code" className="w-1/2" />
+                <img src={userInfo.qrCodeUrl ? `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${decode(userInfo.qrCodeUrl)}` : "https://via.placeholder.com/150"} alt="QR code" className="w-1/2 invert" />
 
-                <p className="font-bold">{decode(userInfo.tax)}</p>
+                <p className="font-bold text-lg">{decode(userInfo.tax)}</p>
             </div>
         </div>
     )
